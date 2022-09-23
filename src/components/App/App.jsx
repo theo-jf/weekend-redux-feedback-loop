@@ -14,6 +14,7 @@ import './App.css';
 //       First route loaded is feedback/feeling
 //       Next brings us to feedback/understanding etc.
 //       Each next click stores that answer in Store
+//       Input required for all except Comments
 //
 // When next button in the Comments component is clicked
 //       Display all answers from the Store in Review
