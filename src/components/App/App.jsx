@@ -26,7 +26,24 @@ import './App.css';
 //       Go back to submitted!
 
 // TODO STRETCH-MODE:
+// Edit submission
+//       Click on value in Review to go back to previous step?
+//            Just repeats the loop from there
+//            Make it clear that they're returning to a step -> 
+//            The whole questionnaire will repeat
+//                  Cache data incase of reload? reload warning
+//                  Force back to start on page reload?
+//
+// Material UI
 // 
+// Admin page
+//       GET route for all submission
+//       Display in a table
+//       Conditional rendering for 'flagged' (true in db) value
+//       DELETE route for submission uses key from table row
+//           Separate component in .map for each entry
+//
+// Heroku!
 
 
 function App() {
