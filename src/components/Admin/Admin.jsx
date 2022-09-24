@@ -47,7 +47,7 @@ export default function Admin() {
             <tbody>
                 {feedback.map((response) => {
                     return (
-                        <AdminItem response={response} />
+                        <AdminItem response={response} getFeedback={getFeedback} />
                     );
                 })}
             </tbody>

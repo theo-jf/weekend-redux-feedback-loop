@@ -54,4 +54,21 @@ router.put('/:id', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    console.log('In DELETE /api/feedback');
+
+    let deleteId = req.params.id;
+
+    const queryText = `DELETE FROM "feedback"
+                            WHERE "id" = $1;`
+
+    pool.query(queryText, [deleteId])
+    .then((result) => {
+        res.sendStatus(200);
+    })
+    .catch((error) => {
+        console.log('Error in DELETE /api/feedback', error);
+    })
+})
+
 module.exports = router;

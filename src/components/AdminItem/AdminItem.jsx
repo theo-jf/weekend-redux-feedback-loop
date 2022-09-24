@@ -1,18 +1,30 @@
-import { useState } from 'react';
 import axios from 'axios';
 
-export default function AdminItem({response}) {
+export default function AdminItem({response, getFeedback}) {
 
     const flagResponse = () => {
         axios.put(`/api/feedback/${response.id}`)
         .then((response) => {
             console.log('Flag successful', response);
+            getFeedback();
         })
         .catch((error) => {
             console.log(error);
             alert('Error flagging response');
         })
-    }   
+    }  
+    
+    const deleteResponse = () => {
+        axios.delete(`/api/feedback/${response.id}`)
+        .then((response) => {
+            console.log('delete successful', response);
+            getFeedback();
+        })
+        .catch((error) => {
+            console.log(error);
+            alert('Error deleting response');
+        })
+    }
 
     return (
         <tr className={response.flagged ? 'flagged' : 'notFlagged'}>
@@ -21,7 +33,7 @@ export default function AdminItem({response}) {
             <td>{response.support}</td>
             <td>{response.comments}</td>
             <td><button onClick={flagResponse}>Flag</button></td>
-            <td><button>Delete</button></td>
+            <td><button onClick={deleteResponse}>Delete</button></td>
         </tr>
     );
 }
