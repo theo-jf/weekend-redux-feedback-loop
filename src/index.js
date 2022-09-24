@@ -21,12 +21,30 @@ const message = (state = 'Welcome!', action) => {
     return state;
 }
 
+const responses = (state = {}, action) => {
+
+    switch (action.type) {
+        case 'ADD_FEELING':
+            return {...state, feeling: action.payload};
+        case 'ADD_UNDERSTANDING':
+            return {...state, understanding: action.payload};
+        case 'ADD_SUPPORTED':
+            return {...state, supported: action.payload};
+        case 'ADD_COMMENTS':
+            return {...state, comments: action.payload};
+        case 'CLEAR':
+            return {};
+    }
+    return state;
+}
+
 
 // Create Redux Store
 const storeInstance = createStore(
     combineReducers(
         {
-            message
+            message,
+            responses
         }
     ),
     applyMiddleware(logger)

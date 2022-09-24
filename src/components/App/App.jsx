@@ -11,6 +11,7 @@ import Header from '../Header/Header';
 import Submitted from '../Submitted/Submitted';
 import Feedback from '../Feedback/Feedback';
 import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
 
 
 // TODO BASE-MODE:
@@ -71,6 +72,7 @@ function App() {
             <Feeling />
           </Route>
           <Route exact path ="/api/understanding">
+            <Understanding />
           </Route>
           <Route exact path ="/api/support">
           </Route>
