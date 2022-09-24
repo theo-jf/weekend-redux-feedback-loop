@@ -32,6 +32,10 @@ export default function Supported() {
         dispatch(action);
     }
 
+    const toUnderstanding = () => {
+        history.push('/feedback/understanding')
+    }
+
     const toComments = () => {
         if (!value) {
             setHelperText('Response required');
@@ -58,6 +62,7 @@ export default function Supported() {
                     </RadioGroup>
                     <FormHelperText>{helperText}</FormHelperText>
             </FormControl>
+            <Button onClick={toUnderstanding}>Back</Button>
             <Button onClick={toComments}>Next</Button>
       </section>
     );
