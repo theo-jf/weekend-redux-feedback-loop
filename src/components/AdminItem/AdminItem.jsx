@@ -3,8 +3,6 @@ import axios from 'axios';
 
 export default function AdminItem({response}) {
 
-    // const [flagged, setFlagged] = useState(false);
-
     const flagResponse = () => {
         axios.put(`/api/feedback/${response.id}`)
         .then((response) => {
@@ -17,14 +15,13 @@ export default function AdminItem({response}) {
     }   
 
     return (
-        <tr key={response.id} 
-            className={response.flagged ? 'flagged' : 'notFlagged'}>
+        <tr className={response.flagged ? 'flagged' : 'notFlagged'}>
             <td>{response.feeling}</td>
             <td>{response.understanding}</td>
             <td>{response.support}</td>
             <td>{response.comments}</td>
-            <td onClick={flagResponse}>flag</td>
-            <td>delete</td>
+            <td><button onClick={flagResponse}>Flag</button></td>
+            <td><button>Delete</button></td>
         </tr>
     );
 }

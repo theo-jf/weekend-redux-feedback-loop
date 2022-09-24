@@ -24,7 +24,8 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     console.log('In GET /api/feedback');
 
-    const queryText = `SELECT * FROM "feedback";`
+    const queryText = `SELECT * FROM "feedback"
+                        ORDER BY "flagged" DESC;`
 
     pool.query(queryText)
     .then((result) => {

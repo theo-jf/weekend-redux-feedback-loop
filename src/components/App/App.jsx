@@ -90,6 +90,7 @@ function App() {
           </Route>
         </Route>
         <Route exact path ="/admin">
+          <Header />
           <Admin />
         </Route>
       </Router>

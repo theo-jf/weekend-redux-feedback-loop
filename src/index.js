@@ -38,13 +38,23 @@ const responses = (state = {}, action) => {
     return state;
 }
 
+const allResponses = (state = [], action) => {
+
+    switch (action.type) {
+        case 'SET_RESPONSES':
+            return action.payload;
+    }
+    return state;
+}
+
 
 // Create Redux Store
 const storeInstance = createStore(
     combineReducers(
         {
             message,
-            responses
+            responses,
+            allResponses
         }
     ),
     applyMiddleware(logger)
