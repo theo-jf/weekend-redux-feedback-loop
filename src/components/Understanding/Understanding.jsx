@@ -24,7 +24,7 @@ export default function Understanding() {
     }
 
     const toSupport = () => {
-        history.push('/feeling/api/support')
+        history.push('/feedback/api/support')
     }
 
     return (

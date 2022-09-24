@@ -71,12 +71,12 @@ function App() {
           <Route exact path ="/feedback/api/feeling">
             <Feeling />
           </Route>
-          <Route exact path ="/api/understanding">
+          <Route exact path ="/feedback/api/understanding">
             <Understanding />
           </Route>
-          <Route exact path ="/api/support">
+          <Route exact path ="/feedback/api/support">
           </Route>
-          <Route exact path ="/api/comments">
+          <Route exact path ="/feedback/api/comments">
           </Route>
         </Route>
         <Route exact path ="/review">

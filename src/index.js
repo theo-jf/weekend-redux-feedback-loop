@@ -32,7 +32,7 @@ const responses = (state = {}, action) => {
             return {...state, supported: action.payload};
         case 'ADD_COMMENTS':
             return {...state, comments: action.payload};
-        case 'CLEAR':
+        case 'RESET_STORE':
             return {};
     }
     return state;
