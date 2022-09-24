@@ -34,6 +34,7 @@ export default function AdminItem({response, getFeedback}) {
             <td>{response.comments}</td>
             <td><button onClick={flagResponse}>{response.flagged ? 'Remove Flag' : 'Flag'}</button></td>
             <td><button onClick={deleteResponse}>Delete</button></td>
+            <td>{(response.date).split('T')[0]}</td>
         </tr>
     );
 }

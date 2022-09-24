@@ -18,6 +18,14 @@
   font-size: large;
 }
 
+.review:hover {
+  cursor: pointer;
+}
+
 h4 {
   font-style: italic;
+}
+
+table {
+  margin: auto;
 }

@@ -11,6 +11,22 @@ export default function Review() {
     const history = useHistory();
     const responses = useSelector(store => store.responses);
 
+    const toFeeling = () => {
+        history.push('/feedback/feeling');
+    }
+
+    const toUnderstanding = () => {
+        history.push('/feedback/understanding')
+    }
+
+    const toSupport = () => {
+        history.push('/feedback/support');
+    }
+
+    const toComments = () => {
+        history.push('/feedback/comments');
+    }
+
     const submitResponses = () => {
         //axios function here
         axios.post('/api/feedback', responses)
@@ -32,10 +48,11 @@ export default function Review() {
     return (
         <section className="review"> 
             <h1>Review your responses</h1>
-            <p>Feeling: {responses.feeling}</p>
-            <p>Understanding: {responses.understanding}</p>
-            <p>Support: {responses.supported}</p>
-            <p>Additional Comments: {responses.comments}</p>
+            <h2>Click on a response to return to that question in the form</h2>
+            <p onClick={toFeeling}>Feeling: {responses.feeling}</p>
+            <p onClick={toUnderstanding}>Understanding: {responses.understanding}</p>
+            <p onClick={toSupport}>Support: {responses.supported}</p>
+            <p onClick={toComments}>Additional Comments: {responses.comments}</p>
             <Button onClick={submitResponses}>Submit</Button>
         </section>
     )

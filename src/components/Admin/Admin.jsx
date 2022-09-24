@@ -38,6 +38,7 @@ export default function Admin() {
                     <th>Comments</th>
                     <th>Flag</th>
                     <th>Delete</th>
+                    <th>Date Submitted</th>
                 </tr>
             </thead>
             <tbody>
