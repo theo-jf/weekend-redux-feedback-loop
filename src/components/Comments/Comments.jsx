@@ -32,11 +32,11 @@ export default function Comments() {
             <FormControl>
             <FormLabel id="feeling">Anything else to add?</FormLabel>
                 <TextField
-                    id="outlined-multiline-static"
-                    label="Multiline"
+                    fullWidth
+                    id="commentsField"
+                    label="Comments"
                     multiline
                     rows={5}
-                    defaultValue="Default Value"
                     onChange={handleChange}
                 />
             </FormControl>
