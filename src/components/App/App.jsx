@@ -9,6 +9,8 @@ import { HashRouter as Router, Route, Link} from 'react-router-dom';
 // Component imports
 import Header from '../Header/Header';
 import Submitted from '../Submitted/Submitted';
+import Feedback from '../Feedback/Feedback';
+import Feeling from '../Feeling/Feeling';
 
 
 // TODO BASE-MODE:
@@ -59,12 +61,14 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Header />
         <Route exact path ="/">
+          <Header />
           <Submitted />
         </Route>
         <Route exact path ="/feedback">
+          <Feedback />
           <Route path ="/api/feeling">
+            <Feeling />
           </Route>
           <Route path ="/api/understanding">
           </Route>

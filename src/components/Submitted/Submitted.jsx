@@ -15,7 +15,7 @@ export default function Submitted() {
             type: 'RESET_STORE',
         }
         dispatch(action);
-        history.push('/feedback/feeling');
+        history.push('/feedback/api/feeling');
     }
 
     return (
