@@ -2,19 +2,31 @@ import axios from 'axios';
 
 import Button from '@mui/material/Button'
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 export default function Review() {
     
+    const dispatch = useDispatch();
     const history = useHistory();
     const responses = useSelector(store => store.responses);
 
     const submitResponses = () => {
         //axios function here
-
-        // on .then
-        history.push('/');
+        axios.post('/api/feedback', responses)
+        .then((response) => {
+            console.log('Feedback POST request successful', response);
+            
+            const action = {
+                type: 'SET_MESSAGE_THANKS'
+            }
+            dispatch(action);
+            history.push('/');
+        })
+        .catch((error) => {
+            alert('Feedback submission error');
+            console.log(error)
+        })
     }
 
     return (

@@ -51,7 +51,7 @@ import Review from '../Review/Review';
 // Material UI
 // 
 // Admin page
-//       GET route for all submission
+//       GET route for all submissions
 //       Display in a table
 //       Conditional rendering for 'flagged' (true in db) value
 //       DELETE route for submission uses key from table row
@@ -71,16 +71,16 @@ function App() {
         </Route>
         <Route path ="/feedback">
           <Feedback />
-          <Route exact path ="/feedback/api/feeling">
+          <Route exact path ="/feedback/feeling">
             <Feeling />
           </Route>
-          <Route exact path ="/feedback/api/understanding">
+          <Route exact path ="/feedback/understanding">
             <Understanding />
           </Route>
-          <Route exact path ="/feedback/api/support">
+          <Route exact path ="/feedback/support">
             <Supported />
           </Route>
-          <Route exact path ="/feedback/api/comments">
+          <Route exact path ="/feedback/comments">
             <Comments />
           </Route>
           <Route exact path ="/feedback/review">

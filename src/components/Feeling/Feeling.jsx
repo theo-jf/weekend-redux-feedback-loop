@@ -37,7 +37,7 @@ export default function Feeling() {
             setHelperText('Response required');
             setError(true);
         } else if (value) {
-            history.push('/feedback/api/understanding')
+            history.push('/feedback/understanding')
         }
     }
 

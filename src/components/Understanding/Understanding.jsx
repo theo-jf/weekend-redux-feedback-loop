@@ -37,7 +37,7 @@ export default function Understanding() {
             setHelperText('Response required');
             setError(true);
         } else if (value) {
-            history.push('/feedback/api/support')
+            history.push('/feedback/support')
         }
     }
 
