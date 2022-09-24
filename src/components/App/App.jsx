@@ -63,6 +63,18 @@ function App() {
         <Route exact path ="/">
           <Submitted />
         </Route>
+        <Route exact path ="/feedback">
+          <Route path ="/api/feeling">
+          </Route>
+          <Route path ="/api/understanding">
+          </Route>
+          <Route path ="/api/support">
+          </Route>
+          <Route path ="/api/comments">
+          </Route>
+        </Route>
+        <Route exact path ="/review">
+        </Route>
       </Router>
     </div>
   );
