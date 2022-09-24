@@ -8,13 +8,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
 // Component imports
 import Header from '../Header/Header';
+import Submitted from '../Submitted/Submitted';
 
 
 // TODO BASE-MODE:
 // Submitted component on load
-//       Conditional 'Welcome!' or 'Thank You for Your Submission!'
-//       Use the Store for this boolean --> changed on click in Review
-//       Leave new feedback button leads to Feedback component
+//       Conditional 'Welcome!' or 'Thank You for Your Submission!' X
+//       Use the Store for this boolean --> changed on click in Review X
+//       Leave new feedback button leads to Feedback component X
 //
 // Feedback component houses all questions and inputs
 //       First route loaded is feedback/feeling
@@ -60,7 +61,7 @@ function App() {
       <Router>
         <Header />
         <Route exact path ="/">
-
+          <Submitted />
         </Route>
       </Router>
     </div>
