@@ -14,6 +14,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 
 
 // TODO BASE-MODE:
@@ -82,8 +83,9 @@ function App() {
           <Route exact path ="/feedback/api/comments">
             <Comments />
           </Route>
-        </Route>
-        <Route exact path ="/review">
+          <Route exact path ="/feedback/review">
+            <Review />
+          </Route>
         </Route>
       </Router>
     </div>

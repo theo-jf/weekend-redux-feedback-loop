@@ -24,11 +24,11 @@ export default function Comments() {
     }
 
     const toReview = () => {
-        history.push('/review')
+        history.push('/feedback/review')
     }
 
     return (
-        <section className="question">
+        <section className="comments">
             <FormControl>
             <FormLabel id="feeling">Anything else to add?</FormLabel>
                 <TextField
