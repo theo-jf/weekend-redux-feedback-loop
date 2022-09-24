@@ -65,16 +65,16 @@ function App() {
           <Header />
           <Submitted />
         </Route>
-        <Route exact path ="/feedback">
+        <Route path ="/feedback">
           <Feedback />
-          <Route path ="/api/feeling">
+          <Route exact path ="/feedback/api/feeling">
             <Feeling />
           </Route>
-          <Route path ="/api/understanding">
+          <Route exact path ="/api/understanding">
           </Route>
-          <Route path ="/api/support">
+          <Route exact path ="/api/support">
           </Route>
-          <Route path ="/api/comments">
+          <Route exact path ="/api/comments">
           </Route>
         </Route>
         <Route exact path ="/review">
