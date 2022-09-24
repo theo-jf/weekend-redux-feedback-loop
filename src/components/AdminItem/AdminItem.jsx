@@ -32,7 +32,7 @@ export default function AdminItem({response, getFeedback}) {
             <td>{response.understanding}</td>
             <td>{response.support}</td>
             <td>{response.comments}</td>
-            <td><button onClick={flagResponse}>Flag</button></td>
+            <td><button onClick={flagResponse}>{response.flagged ? 'Remove Flag' : 'Flag'}</button></td>
             <td><button onClick={deleteResponse}>Delete</button></td>
         </tr>
     );

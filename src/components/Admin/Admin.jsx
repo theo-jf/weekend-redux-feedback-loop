@@ -9,7 +9,8 @@ export default function Admin() {
 
     const dispatch = useDispatch();
 
-    const feedback = useSelector(store => store.allResponses);
+    // const feedback = useSelector(store => store.allResponses);
+    const [feedback, setFeedback] = useState([])
 
     useEffect(() => {
         getFeedback();
@@ -18,13 +19,8 @@ export default function Admin() {
     const getFeedback = () => {
         axios.get('/api/feedback')
         .then((response) => {
-            console.log('GET feedback successful', response.data)
-            
-            const action = {
-                type: 'SET_RESPONSES',
-                payload: response.data
-            }
-            dispatch(action);
+            console.log('GET feedback successful', response.data);
+            setFeedback(response.data);
         })
         .catch((error) => {
             console.log(error);
@@ -47,7 +43,7 @@ export default function Admin() {
             <tbody>
                 {feedback.map((response) => {
                     return (
-                        <AdminItem response={response} getFeedback={getFeedback} />
+                        <AdminItem key={response.id} response={response} getFeedback={getFeedback} />
                     );
                 })}
             </tbody>
