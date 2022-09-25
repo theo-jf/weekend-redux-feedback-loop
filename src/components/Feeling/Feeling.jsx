@@ -48,7 +48,7 @@ export default function Feeling() {
     return (
         <section className="question">
             <FormControl error={error}>
-            <FormLabel id="feeling">On a scale of 1-5, how are you feeling today?</FormLabel>
+            <FormLabel id="questionTitle">On a scale of 1-5, how are you feeling today?</FormLabel>
                     <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"

@@ -34,18 +34,18 @@ export default function Comments() {
     return (
         <section className="comments">
             <FormControl>
-            <FormLabel id="feeling">Anything else to add?</FormLabel>
-                <TextField
+            <FormLabel id="commentsTitle">Anything else to add?</FormLabel>
+            </FormControl>
+            <Button onClick={toSupport}>Back</Button>
+            <Button onClick={toReview}>Review Answers</Button>
+            <TextField
                     fullWidth
                     id="commentsField"
                     label="Comments"
                     multiline
-                    rows={5}
+                    rows={6}
                     onChange={handleChange}
                 />
-            </FormControl>
-            <Button onClick={toSupport}>Back</Button>
-            <Button onClick={toReview}>Review Answers</Button>
       </section>
     );
 }

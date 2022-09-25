@@ -48,7 +48,7 @@ export default function Understanding() {
     return (
         <section className="question">
             <FormControl error={error}>
-            <FormLabel id="feeling">How well are you understanding the material?</FormLabel>
+            <FormLabel id="questionTitle">How well are you understanding the material?</FormLabel>
                     <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"

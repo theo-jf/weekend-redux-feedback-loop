@@ -1,0 +1,48 @@
+.flagged {
+    color: rgb(255, 0, 0);
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.tableHouse {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    min-width: none;
+    table-layout: fixed;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+table, th, td{
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid;
+    border-color: black;
+    overflow-x: scroll;
+}
+
+th {
+    padding: 10px;
+    overflow-x: scroll;
+}
+
+#commentsHeader {
+    width: 100px;
+    max-width: 100px;
+}
+
+#commentsData {
+    text-align: left;
+    padding-left: 10px;
+    max-width: 200px;
+}
+
+#flagHeader {
+    width: 100px;
+}

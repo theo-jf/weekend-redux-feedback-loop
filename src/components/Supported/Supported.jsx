@@ -48,7 +48,7 @@ export default function Supported() {
     return (
         <section className="question">
             <FormControl error={error}>
-            <FormLabel id="feeling">How well are you being supported?</FormLabel>
+            <FormLabel id="questionTitle">How well are you being supported?</FormLabel>
                     <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"

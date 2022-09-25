@@ -1,3 +1,5 @@
+import './Admin.css';
+
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -29,25 +31,27 @@ export default function Admin() {
     }
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Feeling</th>
-                    <th>Understanding</th>
-                    <th>Support</th>
-                    <th>Comments</th>
-                    <th>Flag</th>
-                    <th>Delete</th>
-                    <th>Date Submitted</th>
-                </tr>
-            </thead>
-            <tbody>
-                {feedback.map((response) => {
-                    return (
-                        <AdminItem key={response.id} response={response} getFeedback={getFeedback} />
-                    );
-                })}
-            </tbody>
-        </table>
+        <section class="tableHouse">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feeling</th>
+                        <th>Understanding</th>
+                        <th>Support</th>
+                        <th id="commentsHeader">Comments</th>
+                        <th id="flagHeader">Flag</th>
+                        <th>Delete</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {feedback.map((response) => {
+                        return (
+                            <AdminItem key={response.id} response={response} getFeedback={getFeedback} />
+                        );
+                    })}
+                </tbody>
+            </table>
+        </section>
     );
 }
