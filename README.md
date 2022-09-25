@@ -26,7 +26,7 @@ Images of the feedback loop and the admin page can be viewed below, and full ass
 
 ## Installation and Setup
 
-Visit the fully deployed app [here]()
+Visit the fully deployed app [here](https://damp-dusk-95049.herokuapp.com/)
 
 Or, run it locally:
 
