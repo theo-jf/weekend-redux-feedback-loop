@@ -18,7 +18,7 @@ export default function Supported() {
 
     const [value, setValue] = useState('');
     const [error, setError] = useState(false);
-    const [helperText, setHelperText] = useState('');
+    const [helperText, setHelperText] = useState(' ');
 
     const handleChange = (e) => {
         setValue(e.target.value);
@@ -48,11 +48,12 @@ export default function Supported() {
     return (
         <section className="question">
             <FormControl error={error}>
-            <FormLabel id="questionTitle">How well are you being supported?</FormLabel>
+            <FormLabel id="questionTitle">How well do you think are you being supported?</FormLabel>
                     <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
+                    className="buttons"
                     >
                     <FormControlLabel value="1" onChange={handleChange} control={<Radio />} label="1" />
                     <FormControlLabel value="2" onChange={handleChange} control={<Radio />} label="2" />
