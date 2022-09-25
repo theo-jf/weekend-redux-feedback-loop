@@ -1,0 +1,44 @@
+h4 {
+    font-style: italic;
+}
+
+.App-header {
+background-color: #033076;
+min-height: 70px;
+padding: 20px;
+color: white;
+margin-bottom: 20px;
+}
+
+.App-title {
+font-size: 2em;
+}
+
+.App-intro {
+font-size: large;
+}
+
+.question {
+    margin: 10px;
+}
+
+.comments {
+    margin: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#questionTitle {
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#commentsTitle {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.buttons {
+    margin: auto;
+}

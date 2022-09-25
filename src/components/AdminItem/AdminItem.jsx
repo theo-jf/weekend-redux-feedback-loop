@@ -1,4 +1,5 @@
 import axios from 'axios';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function AdminItem({response, getFeedback}) {
 
@@ -15,15 +16,18 @@ export default function AdminItem({response, getFeedback}) {
     }  
     
     const deleteResponse = () => {
-        axios.delete(`/api/feedback/${response.id}`)
-        .then((response) => {
-            console.log('delete successful', response);
-            getFeedback();
-        })
-        .catch((error) => {
-            console.log(error);
-            alert('Error deleting response');
-        })
+
+        if (confirm('Delete entry?') == true) {
+            axios.delete(`/api/feedback/${response.id}`)
+            .then((response) => {
+                console.log('delete successful', response);
+                getFeedback();
+            })
+            .catch((error) => {
+                console.log(error);
+                alert('Error deleting response');
+            })
+        }
     }
 
     return (
@@ -31,9 +35,9 @@ export default function AdminItem({response, getFeedback}) {
             <td>{response.feeling}</td>
             <td>{response.understanding}</td>
             <td>{response.support}</td>
-            <td>{response.comments}</td>
-            <td><button onClick={flagResponse}>{response.flagged ? 'Remove Flag' : 'Flag'}</button></td>
-            <td><button onClick={deleteResponse}>Delete</button></td>
+            <td id="commentsData">{response.comments}</td>
+            <td><button className="clickable" onClick={flagResponse}>{response.flagged ? 'Remove Flag' : 'Flag'}</button></td>
+            <td className="clickable" onClick={deleteResponse}><DeleteIcon /></td>
             <td>{(response.date).split('T')[0]}</td>
         </tr>
     );

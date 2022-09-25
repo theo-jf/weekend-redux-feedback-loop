@@ -1,3 +1,5 @@
+import './Feedback.css';
+
 export default function Feedback() {
     return (
         <header className='App-header'>
