@@ -23,8 +23,12 @@ export default function Comments() {
         dispatch(action);
     }
 
+    const toSupport = () => {
+        history.push('/feedback/support');
+    }
+
     const toReview = () => {
-        history.push('/feedback/review')
+        history.push('/feedback/review');
     }
 
     return (
@@ -40,6 +44,7 @@ export default function Comments() {
                     onChange={handleChange}
                 />
             </FormControl>
+            <Button onClick={toSupport}>Back</Button>
             <Button onClick={toReview}>Review Answers</Button>
       </section>
     );

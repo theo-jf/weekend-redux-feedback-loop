@@ -15,6 +15,7 @@ import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Admin from '../Admin/Admin';
 
 
 // TODO BASE-MODE:
@@ -42,6 +43,7 @@ import Review from '../Review/Review';
 // TODO STRETCH-MODE:
 // Edit submission
 //       Click on value in Review to go back to previous step?
+//      BACK BUTTON ON EVERY STEP!
 //            Just repeats the loop from there
 //            Make it clear that they're returning to a step -> 
 //            The whole questionnaire will repeat
@@ -86,6 +88,10 @@ function App() {
           <Route exact path ="/feedback/review">
             <Review />
           </Route>
+        </Route>
+        <Route exact path ="/admin">
+          <Header />
+          <Admin />
         </Route>
       </Router>
     </div>
