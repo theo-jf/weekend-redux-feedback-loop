@@ -5,7 +5,7 @@
 
 This weekend assignment required us to create a full-stack, four question feedback form using React and Redux. Each question and page was required to be its own React component, and routes were to be used to link each component together and return the user to the home page upon a successful feedback submission, thus creating a "feedback" loop!
 
-Individual question responses were to be stored in the Redux store, and after user review, send to the server-side database in a single POST request.
+Individual question responses were to be stored in the Redux store, and after user review, sent to the server-side database in a single POST request.
 
 Stretch goals included allowing users to navigate back through the questionnaire to edit their responses, and the creation of an administrator page. This administrator page would display a table of all feedback submissions, with the option to flag individual responses or delete an entry entirely.
 
